@@ -133,31 +133,31 @@
     </div>
 </section>
 
-<div class="section-white">
+<section class="section">
     <div class="container carousel_padding">
-        <div class="carousel_logo">
+        <div class="carousel_logo d-flex">
             <h3 class="mb-5"><span style="color: #E62626">Наші</span> кейси</h3>
         </div>
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 ">
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="row justify-content-center">
+                        <div class="width_car_button">
+                            <button class="car_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <img src="assets/img/car1.png" class="d-block w-100" alt="...">
                             </button>
                             <h5>BMW S4862, <span style="color: #16161699">2021</span></h5>
                             <p>Придбали з США за <span style="font-weight: 600">$2000</span></p>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 ">
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        <div class="width_car_button">
+                            <button class="car_button" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                 <img src="assets/img/car2.png" class="d-block w-100" alt="...">
                             </button>
                             <h5>BMW S4862, <span style="color: #16161699">2021</span></h5>
                             <p>Придбали з США за <span style="font-weight: 600">$2000</span></p>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 ">
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                        <div class="width_car_button">
+                            <button class="car_button" data-bs-toggle="modal" data-bs-target="#exampleModal3">
                                 <img src="assets/img/car3.png" class="d-block w-100" alt="...">
                             </button>
                             <h5>BMW S4862, <span style="color: #16161699">2021</span></h5>
@@ -166,23 +166,23 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 ">
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                    <div class="row justify-content-center">
+                        <div class="width_car_button">
+                            <button class="car_button" data-bs-toggle="modal" data-bs-target="#exampleModal4">
                                 <img src="assets/img/car1.png" class="d-block w-100" alt="...">
                             </button>
                             <h5>BMW S4862, <span style="color: #16161699">2021</span></h5>
                             <p>Придбали з США за <span style="font-weight: 600">$2000</span></p>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 ">
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                            </div>
+                        <div class="width_car_button">
+                            <button class="car_button" data-bs-toggle="modal" data-bs-target="#exampleModal5">
                                 <img src="assets/img/car2.png" class="d-block w-100" alt="...">
                             </button>
                             <h5>BMW S4862, <span style="color: #16161699">2021</span></h5>
                             <p>Придбали з США за <span style="font-weight: 600">$2000</span></p>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 ">
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                        <div class="width_car_button">
+                            <button class="car_button" data-bs-toggle="modal" data-bs-target="#exampleModal6">
                                 <img src="assets/img/car3.png" class="d-block w-100" alt="...">
                             </button>
                             <h5>BMW S4862, <span style="color: #16161699">2021</span></h5>
@@ -201,7 +201,7 @@
             </button>
         </div>
     </div>
-</div>
+</section>
 
 <section class="section section-dark">
     <div class="container section_padding">
@@ -510,5 +510,28 @@
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+    let slideIndex = 0;
+    showSlide(slideIndex);
+
+    function prevSlide() {
+        showSlide(slideIndex -= 1);
+    }
+
+    function nextSlide() {
+        showSlide(slideIndex += 1);
+    }
+
+    function showSlide(n) {
+        const slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) { slideIndex = 0; }
+        if (n < 0) { slideIndex = slides.length - 1; }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+</script>
 </body>
 </html>
