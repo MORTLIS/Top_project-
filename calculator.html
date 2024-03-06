@@ -51,29 +51,23 @@
                                 <h3>Доставка</h3>
                             </div>
                             <div class="">
+                                <h5>Вартість на аукціоні (USD)</h5>
+                                <input id="costField" type="number" min="1" step="1" placeholder="Вартість авто на аукціоні" class="form-control calculator_buttons" required>
                                 <h5>Аукціон</h5>
-                                <select size="" class="w-100 calculator_buttons">
-                                    <option>Обрати аукціон</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
+
+                                <select size="" class="w-100 calculator_buttons" id="auctionSelect">
+                                    <option value="" disabled selected>Оберіть аукціон</option>
+                                    <option>Copart</option>
+                                    <option>IAAI</option>
                                 </select>
-                                <h5>Вартість на аукціоні</h5>
-                                <input type="text" placeholder="Вартість авто на аукціоні" class="form-control calculator_buttons" required="">
-                                <h5>Тип кузова</h5>
-                                <select size="" class="w-100 calculator_buttons">
-                                    <option>Обрати тип кузова</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
+
+                                <h5>Локація</h5>
+                                <select class="w-100 calculator_buttons" id="locationSelect" disabled>
+                                    <option value="" disabled selected>Оберіть локацію</option>
                                 </select>
                             </div>
                             <div>
-                                <h4>Вартість доставки: <span>1500</span></h4>
+                                <h4>Вартість доставки: <span id="totalDelivery">-</span></h4>
                             </div>
                         </div>
 
@@ -85,35 +79,41 @@
                             </div>
                             <div class="">
                                 <h5>Тип двигуна</h5>
-                                    <select size="" class="w-100 calculator_buttons">
-                                        <option>Обрати тип двигуна</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
+                                    <select id="engineTypeSelect" size="" class="w-100 calculator_buttons">
+                                        <option value="petrol">Бензиновий</option>
+                                        <option value="diesel">Дизельний</option>
+                                        <option value="electric">Електричний</option>
                                     </select>
-                                <h5>Об ‘єм (см3) або (кВт • ч)</h5>
-                                <input type="text" placeholder="Вкажіть об’єм двигуна" class="form-control calculator_buttons" required="">
-                                <h5>Рік випуску</h5>
-                                <select size="" class="w-100 calculator_buttons">
-                                    <option>Обрати рік</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
+                                <h5>Об ‘єм (см3) або (кВт • г)</h5>
+                                <input id="engineSizeField" type="number" min="1" step="1" placeholder="Вкажіть об’єм двигуна" class="form-control calculator_buttons" required="">
+                                <h5>Вік авто</h5>
+                                <select id="ageSelect" size="" class="w-100 calculator_buttons">
+                                    <option value="1">1 рік</option>
+                                    <option value="2">2 роки</option>
+                                    <option value="3">3 роки</option>
+                                    <option value="4">4 роки</option>
+                                    <option value="5">5 років</option>
+                                    <option value="6">6 років</option>
+                                    <option value="7">7 років</option>
+                                    <option value="8">8 років</option>
+                                    <option value="9">9 років</option>
+                                    <option value="10">10 років</option>
+                                    <option value="11">11 років</option>
+                                    <option value="12">12 років</option>
+                                    <option value="13">13 років</option>
+                                    <option value="14">14 років</option>
+                                    <option value="15">15 і більше</option>
                                 </select>
                             </div>
                             <div>
-                                <h4>Вартість розмитнення: <span>1500</span></h4>
+                                <h4>Вартість розмитнення: <span id="totalTax">-</span></h4>
                             </div>
                         </div>
                         <div>
-                            <h2 class="text-center">Прорахунок: <span>2300</span></h2>
+                            <h2 class="text-center">Прорахунок: <span id="totalSum">-</span></h2>
                         </div>
                         <div>
-                            <form class="d-flex w-100 justify-content-center" role="search">
+                            <form class="d-flex w-100 justify-content-center" role="search" id="calculatorSubmitForm">
                                 <button class="btn btn-outline-success w-50 h-100 form-control_2" type="submit">Отримати підбір авто</button>
                             </form>
                         </div>
@@ -168,5 +168,6 @@
         </nav>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

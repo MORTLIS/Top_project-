@@ -208,12 +208,24 @@ p{
     background-color: #FFFFFF29
 }
 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder, input[type="number"]::placeholder {
     color: #FFFFFFB2;}
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="number"]:focus {
     background-color: #FFFFFF29;
     color: #FFFFFFB2;
+}
+
+/* Для Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 
